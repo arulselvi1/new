@@ -1,0 +1,143 @@
+1) For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+For Loop:
+
+var people = [{
+    "name" : "Darren", 
+    "age" : "24",
+    "gender"   : "Male",
+    
+},{
+    "name" : "Mai", 
+    "age" : "28",
+    "gender"   : "Female",
+    
+}];
+
+for(var i = 0; i < people.length; i++) {
+    var person = people[i];
+
+    console.log('Name: '+person.name+' Age:'+person.age);
+}
+
+output : Name: Darren Age:24
+	 Name: Mai Age:28
+---------------------------------------------------------------------------------------
+For-in Loop :
+
+var person={
+ 	first_name:"johnny",
+  	last_name: "johnson",
+	phone:"703-3424-1111"
+};
+for (var property in person) {
+  	console.log(property,":",person[property]);
+}
+
+output : 
+first_name : johnny
+last_name : johnson
+phone : 703-3424-1111
+
+----------------------------------------------------------------------------------------
+For-of Loop :
+
+let array = [{
+  name : 'name1'
+},
+ {
+   name : 'name2'
+},
+ {
+   name : 'name3'  
+}]
+
+// We can use for-of loop to get the value of the key name:
+
+for(key of array){
+  console.log(key.name)
+}
+
+output:
+name1
+name2
+name3
+--------------------------------------------------------------------------------------------
+For-Each loop:
+This method is used for looping through an array element. 
+
+
+var names = ["jerry", "tom", "pluto", "micky", "mini"];
+names.forEach(function1);
+function function1(currentValue, index) {
+   console.log("Index in array is: "+index + " ::  Value is: "+currentValue);
+}
+
+output:
+Index in array is: 0 ::  Value is: jerry
+Index in array is: 1 ::  Value is: tom
+Index in array is: 2 ::  Value is: pluto
+Index in array is: 3 ::  Value is: micky
+Index in array is: 4 ::  Value is: mini
+----------------------------------------------------------------------------------------------
+2) Create your own resume data in JSON format :
+
+{
+  "basics": {
+    "name": "Arul selvi S",
+    "email": "arulselviusp@gmail.com",
+    "phone": "123456789",
+    "degree": "B.TECH in IT",
+    "location": {
+      "address": "Abc street , Chennai",
+      "postalCode": "600080",
+      "city": "Chennai",
+      "country": "India",
+      "state": "Tamil Nadu"
+    },
+    
+  "work": [
+    {
+      "company": "DXC technology",
+      "position": "Associate Professional",
+      "startDate": "2015-09-20",
+      "endDate": "2019-10-18",
+      "summary": "Worked in Java production support",
+      
+    }
+  ],
+  
+  "education": [
+    {
+      "institution": "RMD Engineering college",
+      "area": "Chennai",
+      "studyType": "Information Technology",
+      "startDate": "2011-06-15",
+      "endDate": "2015-05-23",
+      "gpa": "7.3",
+      "courses":"Bachelor of Technology in Information technology"
+      
+    }
+  ],
+ 
+  "skills": [
+    {
+      "name": "HTML, CSS , JAVA",
+      "level": "Associate Professional",
+      "keywords": [
+        "java, html, css, production support"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English, Tamil, Hindi, Telugu",
+      "fluency": "English, Tamil"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Cooking, Art work",
+    }
+  ]
+}
